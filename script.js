@@ -6,14 +6,12 @@ const nicknames = ["buckaroo", "sport", "little fella", "broseph", "my dude", "p
 
 const positives = ["Nice jacket", "Those are some cool shorts", "Cool glasses", "Looking handsome today", "Beautiful as always", "You're a star", "You look dashing", "You're breathtaking", "Marvelous as always", "Good to see you"];
 
+const generateCompliment = () => {
 // We generate our random indexes to make our selection.
-
-const s = Math.floor(Math.random() * salutations.length);
-
-const n = Math.floor(Math.random() * nicknames.length);
-
-const p = Math.floor(Math.random() * positives.length);
-
+    const s = Math.floor(Math.random() * salutations.length);
+    const n = Math.floor(Math.random() * nicknames.length);
+    const p = Math.floor(Math.random() * positives.length);
 // Finally, we generate our message.
-
-console.log(salutations[s] + ', ' + nicknames[n] + '! ' + positives[p] + '!');
+    const message = salutations[s] + ', ' + nicknames[n] + '! ' + positives[p] + '!'
+    document.getElementById("compliment").innerHTML = message;
+};
